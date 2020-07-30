@@ -145,7 +145,11 @@ def five():
 	# There are no hints for this question.
     
 def six(input):
-	return False
+  output = input.lower()
+  if output[-2:]=="py":
+    return True
+  else:
+    return False
 
 	# <QUESTION 7>
 
