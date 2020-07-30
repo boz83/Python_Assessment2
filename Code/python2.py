@@ -1,4 +1,5 @@
-	# INSTRUCTIONS
+import random
+  # INSTRUCTIONS
 
 	# In case it is not clear, the Question appears first, then examples, then any hints and finally the function that you need to complete appears underneath:
 
@@ -126,7 +127,10 @@ def four(input1, input2):
 	# The random module contains a function called randint.
 
 def five():
-    return []
+    rand=[]
+    for i in range(5):
+      rand.append(random.randrange(100,201,2))
+    return rand
 
 	# <QUESTION 6>
 
@@ -173,7 +177,15 @@ def six(input):
 	# Use the cli to access the documentation help(list.sort)
 
 def seven(a, b, c):
-	return False
+  list=[a, b, c]
+  list.sort()
+  diff1 = list[1]-list[0]
+  diff2 = list[2]-list[1]
+  if diff1 == diff2:
+    return True
+  else:
+    return False
+
 
 	# <QUESTION 8>
 
