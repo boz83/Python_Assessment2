@@ -129,7 +129,7 @@ def four(input1, input2):
 def five():
     rand=[]
     for i in range(5):
-      rand.append(random.randrange(100,201,2))
+      rand.append(random.randrange(100,200,2))
     return rand
 
 	# <QUESTION 6>
@@ -203,7 +203,7 @@ def seven(a, b, c):
     # Use the cli to access the documentation help(str.replace)
 
 def eight(input,  a):
-	return ""
+  return ""
 
 	# <QUESTION 9>
 
@@ -220,8 +220,17 @@ def eight(input,  a):
 	# There are no hints for this question.
 
 def nine(string1, string2):
-    return False
+  freqChar = {string1[i] : 0 for i in range(len(string1))} # frequency of each character in first string
+  for i in range(len(string1)):
+    freqChar[string1[i]] +=1
 
+  for i in range(len(string2)): #goes through second string 
+    if freqChar[string2[i]]==0:    #checks if second string has required char counts
+      return False
+    freqChar[string2[i]]-=1
+  return True
+
+  
 	# <QUESTION 10>
 
     # Write a function which takes 2 integers greater than 0, X,Y as input and generates a 2-dimensional array. 
